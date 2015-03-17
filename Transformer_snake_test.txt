@@ -1,0 +1,276 @@
+en
+conf t
+!
+vrf definition 101
+ rd 1:101
+ route-target export 1:101
+ route-target import 1:101
+ !
+ address-family ipv4
+  route-target export 1:101
+  route-target import 1:101
+ exit-address-family
+!
+vrf definition 102
+ rd 1:102
+ route-target export 1:102
+ route-target import 1:102
+ !
+ address-family ipv4
+  route-target export 1:102
+  route-target import 1:102
+ exit-address-family
+!
+vrf definition 103
+ rd 1:103
+ route-target export 1:103
+ route-target import 1:103
+ !
+ address-family ipv4
+  route-target export 1:103
+  route-target import 1:103
+ exit-address-family
+!
+vrf definition 104
+ rd 1:104
+ route-target export 1:104
+ route-target import 1:104
+ !
+ address-family ipv4
+  route-target export 1:104
+  route-target import 1:104
+ exit-address-family
+!
+vrf definition 105
+ rd 1:105
+ route-target export 1:105
+ route-target import 1:105
+ !
+ address-family ipv4
+  route-target export 1:105
+  route-target import 1:105
+ exit-address-family
+!
+vrf definition 106
+ rd 1:106
+ route-target export 1:106
+ route-target import 1:106
+ !
+ address-family ipv4
+  route-target export 1:106
+  route-target import 1:106
+ exit-address-family
+!
+vrf definition 107
+ rd 1:107
+ route-target export 1:107
+ route-target import 1:107
+ !
+ address-family ipv4
+  route-target export 1:107
+  route-target import 1:107
+ exit-address-family
+!
+vrf definition 108
+ rd 1:108
+ route-target export 1:108
+ route-target import 1:108
+ !
+ address-family ipv4
+  route-target export 1:108
+  route-target import 1:108
+ exit-address-family
+!
+
+
+interface TenGigabitEthernet1/1
+ mac-address 0000.0001.0001
+ mtu 9216
+ vrf forwarding 101
+ ip address 90.2.1.1 255.255.255.0
+ load-balance src-ip
+ no cdp enable
+
+interface TenGigabitEthernet1/10
+ mac-address 0000.0001.0010
+ mtu 9216
+ vrf forwarding 101
+ ip address 10.1.8.1 255.255.255.0
+ load-balance src-ip
+ no cdp enable
+!
+interface TenGigabitEthernet1/9
+ mac-address 0000.0001.0009
+ mtu 9216
+ vrf forwarding 102
+ ip address 10.1.8.2 255.255.255.0
+ load-balance src-ip
+ no cdp enable
+interface TenGigabitEthernet1/2
+ mac-address 0000.0001.0002
+ mtu 9216
+ vrf forwarding 102
+ ip address 10.1.9.1 255.255.255.0
+ load-balance src-ip
+ no cdp enable
+interface TenGigabitEthernet1/3
+ mac-address 0000.0001.0003
+ mtu 9216
+ vrf forwarding 103
+ ip address 10.1.9.2 255.255.255.0
+ load-balance src-ip
+ no cdp enable
+interface TenGigabitEthernet1/12
+ mac-address 0000.0001.0012
+ mtu 9216
+ vrf forwarding 103
+ ip address 10.1.10.1 255.255.255.0
+ load-balance src-ip
+ no cdp enable
+!
+interface TenGigabitEthernet1/11
+ mac-address 0000.0001.0011
+ mtu 9216
+ vrf forwarding 104
+ ip address 10.1.10.2 255.255.255.0
+ load-balance src-ip
+ no cdp enable
+!
+interface TenGigabitEthernet1/5
+ mac-address 0000.0001.0005
+ mtu 9216
+ vrf forwarding 104
+ ip address 10.1.11.1 255.255.255.0
+ load-balance src-ip
+ no cdp enable
+!
+interface TenGigabitEthernet1/6
+ mac-address 0000.0001.0006
+ mtu 9216
+ vrf forwarding 105
+ ip address 10.1.11.2 255.255.255.0
+ load-balance src-ip
+ no cdp enable
+!
+interface TenGigabitEthernet1/13
+ mac-address 0000.0001.0013
+ mtu 9216
+ vrf forwarding 105
+ ip address 10.1.12.1 255.255.255.0
+ load-balance dst-ip
+ no cdp enable
+!
+interface TenGigabitEthernet1/14
+ mac-address 0000.0001.0014
+ mtu 9216
+ vrf forwarding 106
+ ip address 10.1.12.2 255.255.255.0
+ load-balance dst-ip
+ no cdp enable
+!
+interface TenGigabitEthernet1/7
+ mac-address 0000.0001.0007
+ mtu 9216
+ vrf forwarding 106
+ ip address 10.1.13.1 255.255.255.0
+ load-balance dst-ip
+ no cdp enable
+!
+interface TenGigabitEthernet1/8
+ mac-address 0000.0001.0008
+ mtu 9216
+ vrf forwarding 107
+ ip address 10.1.13.2 255.255.255.0
+ load-balance dst-ip
+ no cdp enable
+!
+interface TenGigabitEthernet1/15
+ mac-address 0000.0001.0015
+ mtu 9216
+ vrf forwarding 107
+ ip address 10.1.14.1 255.255.255.0
+ load-balance dst-ip
+ no cdp enable
+!
+interface TenGigabitEthernet1/16
+ mac-address 0000.0001.0016
+ mtu 9216
+ vrf forwarding 108
+ ip address 10.1.14.2 255.255.255.0
+ load-balance dst-ip
+ no cdp enable
+!
+interface TenGigabitEthernet1/4
+ mac-address 0000.0001.0004
+ mtu 9216
+ vrf forwarding 108
+ ip address 101.1.1.1 255.255.255.0
+ load-balance dst-ip
+ no cdp enable
+!
+
+ip route vrf 101 101.1.1.2 255.255.255.255 10.1.8.2
+ip route vrf 102 90.2.1.2 255.255.255.255 10.1.8.1
+ip route vrf 102 101.1.1.2 255.255.255.255 10.1.9.2
+ip route vrf 103 90.2.1.2 255.255.255.255 10.1.9.1
+ip route vrf 103 101.1.1.2 255.255.255.255 10.1.10.2
+ip route vrf 104 90.2.1.2 255.255.255.255 10.1.10.1
+ip route vrf 104 101.1.1.2 255.255.255.255 10.1.11.2
+ip route vrf 105 90.2.1.2 255.255.255.255 10.1.11.1
+ip route vrf 105 101.1.1.2 255.255.255.255 10.1.12.2
+ip route vrf 106 90.2.1.2 255.255.255.255 10.1.12.1
+ip route vrf 106 101.1.1.2 255.255.255.255 10.1.13.2
+ip route vrf 107 90.2.1.2 255.255.255.255 10.1.13.1
+ip route vrf 107 101.1.1.2 255.255.255.255 10.1.14.2
+ip route vrf 108 90.2.1.2 255.255.255.255 10.1.14.1
+
+arp vrf 101 90.2.1.1 0000.0001.0001 ARPA
+arp vrf 101 10.1.8.1 0000.0001.0010 ARPA
+arp vrf 102 10.1.9.1 0000.0001.0002 ARPA
+arp vrf 103 10.1.10.1 0000.0001.0012 ARPA
+arp vrf 104 10.1.11.1 0000.0001.0005 ARPA
+arp vrf 105 10.1.12.1 0000.0001.0013 ARPA
+arp vrf 106 10.1.13.1 0000.0001.0007 ARPA
+arp vrf 107 10.1.14.1 0000.0001.0015 ARPA
+arp vrf 108 101.1.1.1 0000.0001.0004 ARPA
+arp vrf 102 10.1.8.2 0000.0001.0009 ARPA
+arp vrf 103 10.1.9.2 0000.0001.0003 ARPA
+arp vrf 104 10.1.10.2 0000.0001.0011 ARPA
+arp vrf 105 10.1.11.2 0000.0001.0006 ARPA
+arp vrf 106 10.1.12.2 0000.0001.0014 ARPA
+arp vrf 107 10.1.13.2 0000.0001.0008 ARPA
+arp vrf 108 10.1.14.2 0000.0001.0016 ARPA
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ipv6 access-list acl-copp-match-mld
+ permit icmp any any mld-report
+ permit icmp any any mld-query
+ permit icmp any any mld-reduction
+ permit icmp any any 143
+!
+ipv6 access-list acl-copp-match-ndv6
+ permit icmp any any nd-na
+ permit icmp any any nd-ns
+ permit icmp any any router-advertisement
+ permit icmp any any router-solicitation
+ permit icmp any any redirect
+!
+ipv6 access-list acl-copp-match-pimv6-data
+ deny 103 any host FF02::D
+ permit 103 any any
+!
+control-plane
+ service-policy input policy-default-autocopp
+!
+!
+!
+line con 0
+ exec-timeout 0 0
+ media-type rj45
+line aux 0
+line vty 0 4
+ login
+ transport input all
+!
+diagnostic bootup level minimal
