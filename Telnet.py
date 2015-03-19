@@ -1,77 +1,67 @@
 '''
 Created on 2015-03-10
 
-@author: gaomwang
+@author: gaomwang@cisco.com
 '''
-import sys
-import time, datetime
-import string
+import time
 import telnetlib
-import abc
 
 class Telnet:
     count = 0  #static member
-    '''
-    This is a class for Telnet operation. As limited to personal knowledge, it only operate Cisco C2960 Server
-    '''
-
-    def __init__(self, host, port):
-        '''
-        Constructor
-        '''
-        pot = int(port) + 2000
-        self.tn = telnetlib.Telnet(host, pot)
+    def __init__(self, host, port=23):
+        pot = int(port)#+ 2000
+        try:
+            self.tn = telnetlib.Telnet(host, pot)
+        except:
+            print "Exception happens at Telnet _init__, port has been occupied? \n"
         Telnet.count += 1
     
-#     @staticmethod
-#     def open():
-#         pass
-#         
     def close(self):
-        #in-class method
         self.tn.close()
     
     def read(self, delay = 0.5):
         time.sleep(delay)
         return self.tn.read_very_eager()
     
-    def read_long(self):
-        time.sleep(5)
-        return self.tn.read_very_eager()
-    
     def write(self, str):
         time.sleep(0.1)
-        return self.tn.write(str + '\n')
+        bk = self.tn.write(str)
         time.sleep(0.1)
-        pass
+        return bk
     
-    def read_until(self):
-        pass
+    def read_until(self, match, timeout=2):
+        #match = '*Password:'
+        try:
+            bk = self.tnt1.read_until(match, timeout)
+        except:
+            print 'wait you given time, but cannot find the given string format! \n'
+        finally:
+            return bk
     
-    def expect(self):
-        pass
+    def expect(self, expt, timeout = 2):
+        try:
+            bk = self.tn.expect(expt, timeout)
+        except Exception as e:
+            print e
+        finally:
+            return bk
     
     def __del__(self):
-        """Destructor -- close the connection."""
-#         Telnet.count -= 1
+        Telnet.count -= 1
         self.close()
         
-#     def howMany(self):
-#         # calculates the Number of the instance of Telnet.
-#         self.open()
-#         return Telnet.count
+    def howMany(self):
+        # calculates the Number of the instance of Telnet.
+        return Telnet.count
 
 if __name__ == '__main__':
-    host = '10.74.88.41'
+    host = '10.74.88.29'
     #port = 23
-    bb = Telnet(host, 12)
-    time.sleep(1)
-    #abc = bb.write('b bootdisk:xformer_0303')
+    bb = Telnet(host, 2043)
     time.sleep(3)
-    for id in range(0,30):
-        #print "the following is part of:", id
-        pp = bb.read_long()
-        print pp
-    
-    del bb
+    bb.write(' \n')
+    pp = bb.read()
+    print pp
+    time.sleep(1800)
+    #del bb
     print 'Closed successfully!'
