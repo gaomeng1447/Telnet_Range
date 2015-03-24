@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ROOT>
+    <LOG_FILE id="0" userName="yojiang" machineName="sha-lnx-vm2" jobNumber="SAMPLE_TEST" timeStamp="CST 2015 Mar 11 11:13:03" cfgFile="/auto/crdc_ebbu_edvt/yojiang/Cat6k/Transformer/Pre_EDVT/Primus/P2B_EDVT/P2B_ROD_02_all_diag_slave.conf" logFile="/auto/crdc_ebbu_edvt/yojiang/logs/yojiang/P2B_ROD_02_all_diag_slave_03111113.log" errorFile="/auto/crdc_ebbu_edvt/yojiang/logs/yojiang/P2B_ROD_02_all_diag_slave_03111113.error" vmarg="1:all:(+5/-5)">
+        <CORNER id="1" temperature="N.A.">
+            <LOOP>
+                <ID>1</ID>
+                <STARTTIME>Mar 11 11:48:36</STARTTIME>
+                <ENDTIME>Mar 11 14:14:04</ENDTIME>
+                <TEMP>52.3</TEMP>
+                <RESULT>PASS</RESULT>
+                <MEMO/>
+            </LOOP>
+            <LOOP>
+                <ID>2</ID>
+                <STARTTIME>Mar 11 14:14:04</STARTTIME>
+                <ENDTIME>Mar 11 16:39:32</ENDTIME>
+                <TEMP>55.6</TEMP>
+                <RESULT>PASS</RESULT>
+                <MEMO/>
+            </LOOP>
+            <LOOP>
+                <ID>3</ID>
+                <STARTTIME>Mar 11 16:39:32</STARTTIME>
+                <ENDTIME>Mar 11 19:04:56</ENDTIME>
+                <TEMP>55.3</TEMP>
+                <RESULT>PASS</RESULT>
+                <MEMO/>
+            </LOOP>
+            <LOOP>
+                <ID>4</ID>
+                <STARTTIME>Mar 11 19:04:56</STARTTIME>
+                <ENDTIME>Mar 11 21:30:18</ENDTIME>
+                <TEMP>55.3</TEMP>
+                <RESULT>PASS</RESULT>
+                <MEMO/>
+            </LOOP>
+            <LOOP>
+                <ID>5</ID>
+                <STARTTIME>Mar 11 21:30:18</STARTTIME>
+                <ENDTIME>Mar 11 23:55:52</ENDTIME>
+                <TEMP>55.0</TEMP>
+                <RESULT>PASS</RESULT>
+                <MEMO/>
+            </LOOP>
+        </CORNER>
+        <CORNER id="2" temperature="N.A.">
+            <LOOP>
+                <ID>1</ID>
+                <STARTTIME>Mar 11 23:55:55</STARTTIME>
+                <ENDTIME>Mar 12 02:21:21</ENDTIME>
+                <TEMP>55.1</TEMP>
+                <RESULT>PASS</RESULT>
+                <MEMO/>
+            </LOOP>
+            <LOOP>
+                <ID>2</ID>
+                <STARTTIME>Mar 12 02:21:21</STARTTIME>
+                <ENDTIME>Mar 12 04:46:49</ENDTIME>
+                <TEMP>55.1</TEMP>
+                <RESULT>PASS</RESULT>
+                <MEMO/>
+            </LOOP>
+            <LOOP>
+                <ID>3</ID>
+                <STARTTIME>Mar 12 04:46:49</STARTTIME>
+                <ENDTIME>Mar 12 07:12:28</ENDTIME>
+                <TEMP>55.3</TEMP>
+                <RESULT>PASS</RESULT>
+                <MEMO/>
+            </LOOP>
+            <LOOP>
+                <ID>4</ID>
+                <STARTTIME>Mar 12 07:12:28</STARTTIME>
+                <ENDTIME>Mar 12 09:37:54</ENDTIME>
+                <TEMP>55.2</TEMP>
+                <RESULT>PASS</RESULT>
+                <MEMO/>
+            </LOOP>
+            <LOOP>
+                <ID>5</ID>
+                <STARTTIME>Mar 12 09:37:54</STARTTIME>
+                <ENDTIME>Mar 12 12:03:25</ENDTIME>
+                <TEMP>55.0</TEMP>
+                <RESULT>PASS</RESULT>
+                <MEMO/>
+            </LOOP>
+        </CORNER>
+        <CORNER id="3" temperature="N.A.">
+            <LOOP>
+                <ID>1</ID>
+                <STARTTIME>Mar 12 22:03:53</STARTTIME>
+                <ENDTIME>Mar 13 00:29:06</ENDTIME>
+                <TEMP>-2.2</TEMP>
+                <RESULT>PASS</RESULT>
+                <MEMO/>
+            </LOOP>
+            <LOOP>
+                <ID>2</ID>
+                <STARTTIME>Mar 13 00:29:06</STARTTIME>
+                <ENDTIME>Mar 13 02:54:34</ENDTIME>
+                <TEMP>-4.9</TEMP>
+                <RESULT>PASS</RESULT>
+                <MEMO/>
+            </LOOP>
+            <LOOP>
+                <ID>3</ID>
+                <STARTTIME>Mar 13 02:54:34</STARTTIME>
+                <ENDTIME>Mar 13 05:20:04</ENDTIME>
+                <TEMP>-5.1</TEMP>
+                <RESULT>PASS</RESULT>
+                <MEMO/>
+            </LOOP>
+            <LOOP>
+                <ID>4</ID>
+                <STARTTIME>Mar 13 05:20:04</STARTTIME>
+                <ENDTIME>Mar 13 07:45:31</ENDTIME>
+                <TEMP>-5.1</TEMP>
+                <RESULT>PASS</RESULT>
+                <MEMO/>
+            </LOOP>
+            <LOOP>
+                <ID>5</ID>
+                <STARTTIME>Mar 13 07:45:31</STARTTIME>
+                <ENDTIME>Mar 13 10:10:49</ENDTIME>
+                <TEMP>-5.2</TEMP>
+                <RESULT>PASS</RESULT>
+                <MEMO/>
+            </LOOP>
+        </CORNER>
+        <CORNER id="4" temperature="N.A.">
+            <LOOP>
+                <ID>1</ID>
+                <STARTTIME>Mar 13 10:10:52</STARTTIME>
+                <ENDTIME>Mar 13 12:36:11</ENDTIME>
+                <TEMP>-5.2</TEMP>
+                <RESULT>PASS</RESULT>
+                <MEMO/>
+            </LOOP>
+            <LOOP>
+                <ID>2</ID>
+                <STARTTIME>Mar 13 12:36:11</STARTTIME>
+                <ENDTIME>Mar 13 14:06:48</ENDTIME>
+                <TEMP>-5.2</TEMP>
+                <RESULT>FAILED</RESULT>
+                <MEMO>SP1:RW2, &lt;br&gt;</MEMO>
+            </LOOP>
+            <LOOP>
+                <ID>3</ID>
+                <STARTTIME>Mar 13 14:06:48</STARTTIME>
+                <ENDTIME>Mar 13 16:32:11</ENDTIME>
+                <TEMP>-5.2</TEMP>
+                <RESULT>PASS</RESULT>
+                <MEMO/>
+            </LOOP>
+            <LOOP>
+                <ID>4</ID>
+                <STARTTIME>Mar 13 16:32:11</STARTTIME>
+                <ENDTIME>Mar 13 18:57:35</ENDTIME>
+                <TEMP>-5.0</TEMP>
+                <RESULT>PASS</RESULT>
+                <MEMO/>
+            </LOOP>
+            <LOOP>
+                <ID>5</ID>
+                <STARTTIME>Mar 13 18:57:35</STARTTIME>
+                <ENDTIME>Mar 13 21:22:54</ENDTIME>
+                <TEMP>-5.0</TEMP>
+                <RESULT>PASS</RESULT>
+                <MEMO/>
+            </LOOP>
+            <LOOP>
+                <ID>6</ID>
+                <STARTTIME>Mar 13 21:22:54</STARTTIME>
+                <ENDTIME>Mar 13 23:48:18</ENDTIME>
+                <TEMP>-5.0</TEMP>
+                <RESULT>PASS</RESULT>
+                <MEMO/>
+            </LOOP>
+        </CORNER>
+    </LOG_FILE>
+    <CONFIG_FILE>
+        <CONTENT>{run parallel}</CONTENT>
+    </CONFIG_FILE>
+    <CONFIG_FILE>
+        <CONTENT>{run parallel}{run parallel}</CONTENT>
+    </CONFIG_FILE>
+</ROOT>
